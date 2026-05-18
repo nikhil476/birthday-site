@@ -79,7 +79,7 @@ const timer = setInterval(() => {
 
 
 
-        const duration = 5000;
+        const duration = 1000;
 
         const end = Date.now() + duration;
 
@@ -235,7 +235,7 @@ prankButton.addEventListener("click", () => {
             finalMessage.classList
                 .remove("hidden");
 
-        }, 2500);
+        }, 2000);
     }
 
 });
