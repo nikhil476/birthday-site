@@ -145,6 +145,9 @@ const prankButton =
 const hiddenImage =
     document.getElementById("hiddenImage");
 
+const secondImage =
+    document.getElementById("secondImage");
+
 const finalMessage =
     document.getElementById("finalMessage");
 
@@ -219,12 +222,19 @@ prankButton.addEventListener("click", () => {
         hiddenImage.classList
             .remove("hidden");
 
-
-
-
-
         prankButton.style.display =
             "none";
+
+
+
+
+
+        setTimeout(() => {
+
+            secondImage.classList
+                .remove("hidden");
+
+        }, 1200);
 
 
 
@@ -235,7 +245,8 @@ prankButton.addEventListener("click", () => {
             finalMessage.classList
                 .remove("hidden");
 
-        }, 2000);
+        }, 2500);
     }
 
 });
+
