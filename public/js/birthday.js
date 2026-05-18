@@ -1,4 +1,6 @@
-
+const yeahSound =
+    document.getElementById("yeahSound");
+    
 const checkingText =
     document.getElementById("checkingText");
 
@@ -34,6 +36,9 @@ setTimeout(() => {
 
     birthdayMessage.classList
         .remove("hidden");
+
+
+    yeahSound.play();
 
 
 
