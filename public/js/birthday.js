@@ -1,6 +1,6 @@
 const yeahSound =
     document.getElementById("yeahSound");
-    
+
 const checkingText =
     document.getElementById("checkingText");
 
@@ -9,10 +9,7 @@ const checkingScreen =
 
 const birthdayMessage =
     document.getElementById("birthdayMessage");
-
-
-
-
+    
 
 setTimeout(() => {
 
@@ -40,17 +37,9 @@ setTimeout(() => {
 
     yeahSound.play();
 
-
-
-
-
     const duration = 5000;
 
     const end = Date.now() + duration;
-
-
-
-
 
     (function frame() {
 
@@ -67,9 +56,6 @@ setTimeout(() => {
         });
 
 
-
-
-
         confetti({
 
             particleCount: 7,
@@ -82,10 +68,6 @@ setTimeout(() => {
 
         });
 
-
-
-
-
         if (Date.now() < end) {
 
             requestAnimationFrame(frame);
@@ -96,17 +78,14 @@ setTimeout(() => {
 }, 3200);
 
 
-
-
-
-
-
-
 const prankButton =
     document.getElementById("prankButton");
 
 const hiddenImage =
     document.getElementById("hiddenImage");
+
+const hiddenImage = 
+    document.getElementById("thirdImage");
 
 const secondImage =
     document.getElementById("secondImage");
@@ -115,9 +94,6 @@ const finalMessage =
     document.getElementById("finalMessage");
 
 let hoverCount = 0;
-
-
-
 
 
 prankButton.addEventListener("mouseover", () => {
@@ -169,13 +145,6 @@ prankButton.addEventListener("mouseover", () => {
     }
 
 });
-
-
-
-
-
-
-
 
 
 prankButton.addEventListener("click", () => {
