@@ -9,7 +9,7 @@ const checkingScreen =
 
 const birthdayMessage =
     document.getElementById("birthdayMessage");
-    
+
 
 setTimeout(() => {
 
@@ -35,7 +35,7 @@ setTimeout(() => {
         .remove("hidden");
 
 
-    yeahSound.play();
+    yeahSound.play().catch(() => {});
 
     const duration = 5000;
 
@@ -84,11 +84,11 @@ const prankButton =
 const hiddenImage =
     document.getElementById("hiddenImage");
 
-const hiddenImage = 
-    document.getElementById("thirdImage");
-
 const secondImage =
     document.getElementById("secondImage");
+
+const thirdImage = 
+    document.getElementById("thirdImage");
 
 const finalMessage =
     document.getElementById("finalMessage");
@@ -167,6 +167,12 @@ prankButton.addEventListener("click", () => {
                 .remove("hidden");
 
         }, 1200);
+
+        setTimeout(() => {
+
+            thirdImage.classList
+                .remove("hidden");
+        });
 
 
 
