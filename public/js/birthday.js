@@ -1,14 +1,9 @@
-const minuteTens =
-    document.getElementById("minuteTens");
 
-const minuteOnes =
-    document.getElementById("minuteOnes");
+const checkingText =
+    document.getElementById("checkingText");
 
-const secondTens =
-    document.getElementById("secondTens");
-
-const secondOnes =
-    document.getElementById("secondOnes");
+const checkingScreen =
+    document.querySelector(".checking-screen");
 
 const birthdayMessage =
     document.getElementById("birthdayMessage");
@@ -17,120 +12,83 @@ const birthdayMessage =
 
 
 
-let totalSeconds = 3;
+setTimeout(() => {
 
+    checkingText.innerText =
+        "OHH ITS REALLY YOU😭";
 
+}, 1800);
 
 
 
-const timer = setInterval(() => {
 
-    totalSeconds--;
 
+setTimeout(() => {
 
+    checkingScreen.style.display =
+        "none";
 
 
 
-    const minutes =
-        Math.floor(totalSeconds / 60);
 
-    const seconds =
-        totalSeconds % 60;
 
+    birthdayMessage.classList
+        .remove("hidden");
 
 
 
 
-    minuteTens.innerText =
-        Math.floor(minutes / 10);
 
-    minuteOnes.innerText =
-        minutes % 10;
+    const duration = 5000;
 
-    secondTens.innerText =
-        Math.floor(seconds / 10);
+    const end = Date.now() + duration;
 
-    secondOnes.innerText =
-        seconds % 10;
 
 
 
 
+    (function frame() {
 
-    if (totalSeconds <= 0) {
+        confetti({
 
-        clearInterval(timer);
+            particleCount: 7,
 
+            angle: 60,
 
+            spread: 70,
 
+            origin: { x: 0 }
 
+        });
 
-        document.querySelector(".countdown-card")
-            .style.display = "none";
 
 
 
 
+        confetti({
 
-        birthdayMessage.classList
-            .remove("hidden");
+            particleCount: 7,
 
+            angle: 120,
 
+            spread: 70,
 
+            origin: { x: 1 }
 
+        });
 
-        const duration = 1000;
 
-        const end = Date.now() + duration;
 
 
 
+        if (Date.now() < end) {
 
+            requestAnimationFrame(frame);
+        }
 
-        (function frame() {
+    })();
 
-            confetti({
-
-                particleCount: 7,
-
-                angle: 60,
-
-                spread: 70,
-
-                origin: { x: 0 }
-
-            });
-
-
-
-
-
-            confetti({
-
-                particleCount: 7,
-
-                angle: 120,
-
-                spread: 70,
-
-                origin: { x: 1 }
-
-            });
-
-
-
-
-
-            if (Date.now() < end) {
-
-                requestAnimationFrame(frame);
-            }
-
-        })();
-    }
-
-}, 1000);
-
+}, 3200);
 
 
 

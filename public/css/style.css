@@ -239,48 +239,9 @@ img{
 
 
 
-.countdown-box{
-
-    display:flex;
-
-    flex-direction:row;
-
-    align-items:center;
-
-    gap:20px;
-}
-
-
-
-
-
 .birthday-title{
 
     font-size:2.5rem;
-}
-
-
-
-
-
-#countdown{
-
-    font-size:5rem;
-
-    font-weight:bold;
-
-    background:rgba(255,255,255,0.1);
-
-    padding:20px 40px;
-
-    border-radius:20px;
-
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-
-    box-shadow:0 0 20px rgba(255,255,255,0.2);
-
-    animation:pulse 1s infinite;
 }
 
 
@@ -383,4 +344,56 @@ img{
     opacity:1;
 
     transform:translateY(0px);
+}
+
+.checking-screen{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+
+
+
+
+#checkingText{
+
+    font-size:3rem;
+
+    letter-spacing:2px;
+
+    text-shadow:0 0 15px rgba(255,255,255,0.5);
+}
+
+
+
+
+
+.blink{
+
+    animation:blink 0.8s infinite;
+}
+
+
+
+
+
+@keyframes blink{
+
+    0%{
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+    }
 }
