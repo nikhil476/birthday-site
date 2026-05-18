@@ -35,7 +35,7 @@ setTimeout(() => {
         .remove("hidden");
 
 
-    yeahSound.play().catch(() => {});
+    yeahSound.play();
 
     const duration = 5000;
 
