@@ -23,25 +23,49 @@
             WAIT WHO IS IT! 👀
         </h1>
 
-        <div class="buttons">
+    <div class="buttons">
 
-            <button onclick="wrongAnswer()">
-                Nikki
-            </button>
+        <button onclick="wrongAnswer()">
+            Nikki
+        </button>
 
-            <button onclick="wrongAnswer()">
-                Tikki
-            </button>
+        <button onclick="wrongAnswer()">
+            Tikki
+        </button>
 
-            <button onclick="wrongAnswer()">
-                NikkiTikki
-            </button>
+        <button onclick="wrongAnswer()">
+            NikkiTikki
+        </button>
 
-            <button onclick="correctAnswer()">
-                Mai Tho Yeh Sb Hu Or Pagal Bhi 😌
-            </button>
+
+
+
+
+        <button id="finalOption"
+                class="hidden-option"
+                onclick="correctAnswer()">
+
+            Mai Tho Yeh Sb Hu Or Pagal Bhi 😌
+
+        </button>
+
+    </div>
+    <div id="popup"
+        class="popup hidden">
+
+        <div class="popup-content">
+
+            <h1 class="emoji">
+                😑
+            </h1>
+
+            <p>
+                LET ME ADD ONE MORE OPTION
+            </p>
 
         </div>
+
+    </div>
 
         <p id="message"></p>
 

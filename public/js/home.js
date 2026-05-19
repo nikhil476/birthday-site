@@ -1,24 +1,62 @@
+const popup =
+    document.getElementById("popup");
+
+const finalOption =
+    document.getElementById("finalOption");
+
+let optionUnlocked = false;
+
+
+
+
+
 function wrongAnswer() {
 
-    const message =
-        document.getElementById("message");
+    if (optionUnlocked) return;
 
-    message.innerText =
-        "Koi Itna Galat Kese Ho Skta!!";
 
-    message.classList.add("shake");
+
+
+
+    popup.classList.remove("hidden");
+
+
+
+
 
     setTimeout(() => {
 
-        message.classList.remove("shake");
+        popup.classList.add("hidden");
 
-    }, 500);
+
+
+
+
+        finalOption.classList
+            .remove("hidden-option");
+
+
+
+
+
+        finalOption.classList
+            .add("show-option");
+
+
+
+
+
+        optionUnlocked = true;
+
+    }, 2200);
 }
+
+
 
 
 
 function correctAnswer() {
 
-    window.location.href = "/birthday";
-
+    window.location.href =
+        "/birthday";
 }
